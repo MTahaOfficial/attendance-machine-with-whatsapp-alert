@@ -106,3 +106,15 @@ src/components/    enrol-camera modal, UI kit, icons
 ## WhatsApp messages (n8n + bridge)
 `whatsapp-bridge/` is a small program that keeps your own WhatsApp logged in and sends the messages n8n gives it, to groups too.
 See `whatsapp-bridge/README.md`. Import `docs/n8n-attendance-workflow.json` into n8n, publish it, and put its Production URL into Meridian > Settings.
+
+## Privacy and consent
+
+Face recognition processes biometric data. Only enrol people who have agreed to it, tell them what is stored (a numeric face descriptor and an optional photo), and follow the privacy laws that apply where you run it. Use fake or consented faces for screenshots and demos.
+
+## Demo logins
+
+The logins shown above (admin123, demo123) are demo defaults only. Change them in your .env file before any real use, and never commit your .env file.
+
+## About the WhatsApp bridge
+
+The whatsapp-bridge folder uses an unofficial library (Baileys) to send messages from a linked WhatsApp number. It is fine for demos and personal use, but WhatsApp can restrict numbers that automate messages. For production use, replace it with the official WhatsApp Business API.
