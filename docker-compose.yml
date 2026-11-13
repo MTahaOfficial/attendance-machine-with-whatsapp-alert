@@ -1,0 +1,15 @@
+# Optional: PostgreSQL in Docker instead of `npm run db:embedded`.   docker compose up -d
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: meridian
+    ports:
+      - '5432:5432'
+    volumes:
+      - meridian-pg:/var/lib/postgresql/data
+volumes:
+  meridian-pg:
